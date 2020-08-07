@@ -1,0 +1,106 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+/* login.scss */
+
+@import "__variable.scss";
+
+body {
+    font-family: $font_0, $font_1;
+    background-color: $color_white_lilac_approx;
+    color: $color_ironside_gray_approx;
+}
+
+a {
+    color: $color_jungle_green_approx;
+}
+
+.errorBox {
+    position: absolute;
+    right: 36px;
+    display: none;
+    top: 26px;
+    width: 251px;
+    .alert {
+        box-shadow: 4px 3px 8px -2px $gray;
+    }
+}
+
+.close {
+    padding: 6px;
+    font-size: 15px;
+}
+
+.login-pane {
+    top: 25%;
+    width: 40%;
+    left: 30%;
+    position: fixed;
+    background: $color_tuna_approx;
+    color: $color_gallery_approx;
+    padding: 15px;
+    border-radius: 5px;
+    h2 {
+        margin-bottom: 40px;
+    }
+    .input-group {
+        margin: 20px 0;
+        width: 100%;
+    }
+    .form-control {
+        background-color: transparent;
+        border-radius: 0;
+        border-left: none;
+        color: $color_gallery_approx;
+        float: left;
+        width: 94%;
+        &:focus {
+            border-color: $color_celeste_approx;
+            +.input-group-addon {
+                border-color: $color_cornflower_blue_approx;
+            }
+        }
+    }
+    .input-group-addon {
+        background-color: transparent;
+        border-radius: 0;
+        border-right: none;
+        color: $color_celeste_approx;
+        float: left;
+        width: 6%;
+        line-height: 20px;
+        height: 34px;
+    }
+    .btn-atlas {
+        padding: 10px 20px;
+        background-color: $color_keppel_approx;
+        color: $white;
+        border: 1px $color_keppel_approx solid;
+        border-radius: 4px;
+        transition: all .3s ease;
+    }
+}
+
+button:focus {
+    outline: 0!important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
